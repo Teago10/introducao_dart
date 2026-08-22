@@ -6,6 +6,7 @@ void main(List<String> args) {
   //modificador final
   //uma final declarada com final pode ser atribuida apenas uma vez e seu valor não pode ser alterado
   //posso declarar em um ponto do sistema e atribuir o valor em outro
+  // final nomeCursoFinal;
   final nomeCursoFinal = "fundamentos do Dart";
   print(nomeCursoFinal);
 

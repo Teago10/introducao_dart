@@ -24,7 +24,7 @@ void main(List<String> args) {
   cotacaoDolar = 5;
 
   //Não permite incluir um double dentro de um inteiro, pois poderia haver perda de precisão
-  //idade = coracaoDolar;
+  //idade = cotacaoDolar;
 
   //Nome de variavel não pode utilizar caracteres especiais, espaçosou palavras reservadas
 
