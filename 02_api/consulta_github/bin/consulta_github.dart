@@ -7,9 +7,13 @@ Future<void> main(List<String> arguments) async{
 
   final resposta = await http.get(url);
 
+  //Para pegar o nome dos repositorios do Git
+  final url2 = Uri.parse('https://api.github.com/users/Teago10/repos');
+  final resp = await http.get(url2);
+
   if(resposta.statusCode == 200){
     final Map<String, dynamic> dados = jsonDecode(resposta.body);
-
+    final List<dynamic> infos = jsonDecode(resp.body);
 
     print("Nome do Usuario: ${dados['name']}");
     print("Login: ${dados['login']}");
@@ -18,6 +22,14 @@ Future<void> main(List<String> arguments) async{
     print("Quantidade de seguidores: ${dados['followers']}");
     print("Quantidade de usuários seguidos: ${dados['following']}");
     print("Quantidade de repositórios públicos: ${dados['public_repos']}");
+
+    var i = 1;
+    for(var repo in infos){
+
+      print("Nome dos Repositorio: ${i} ${repo['name']}");
+      i++;
+    }
+    
   }else{
     print("Perfil não encontrado");
   }
