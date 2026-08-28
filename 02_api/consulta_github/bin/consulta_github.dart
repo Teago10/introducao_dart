@@ -21,7 +21,7 @@ Future<void> main(List<String> arguments) async{
     print("Localização: ${dados['location']}");
     print("Quantidade de seguidores: ${dados['followers']}");
     print("Quantidade de usuários seguidos: ${dados['following']}");
-    print("Quantidade de repositórios públicos: ${dados['public_repos']}");
+    print("Quantidade de repositórios públicos: ${dados['public_repos']} \n");
 
     var i = 1;
     for(var repo in infos){
@@ -29,7 +29,7 @@ Future<void> main(List<String> arguments) async{
       print("Nome dos Repositorio: ${i} ${repo['name']}");
       i++;
     }
-    
+
   }else{
     print("Perfil não encontrado");
   }
