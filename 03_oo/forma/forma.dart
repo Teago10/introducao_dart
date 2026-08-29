@@ -22,7 +22,7 @@ abstract class Forma {
     //if(tipoForma != null){
     //  print("${tipoForma.name} com area de ${calculaArea()}");
     //}
-    print("${tipoForma.name} com area de ${calculaArea()}");
+    print("${tipoForma.name} com area de ${calculaArea().toStringAsFixed(2)}");
   }
 
 }
