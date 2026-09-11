@@ -1,0 +1,1 @@
+enum tpEspecie{Mamifero, Aves, Peixes, Anfibios, Insetos, Aracnideos}
