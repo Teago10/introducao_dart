@@ -31,6 +31,7 @@ class EnderecoView {
       print(e);
     }on CepInvalidoException catch(e){
       print("Erro na estrutura do Cep Informado");
+      print(e);
     }on ApiInvalidaException catch(e){
       print("Erro na API");
       print(e);

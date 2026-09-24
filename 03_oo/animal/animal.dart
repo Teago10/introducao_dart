@@ -1,21 +1,20 @@
 import 'alimento.dart';
-import 'enum.dart' ;
+import 'especie.dart';
+
+// Generalização
 
 abstract class Animal {
-
   String nome;
   double peso;
   Alimento alimento;
-  tpEspecie tipoEspecie;
+  Especie especie;
 
-
-  
-
-  Animal(this.tipoEspecie, this.alimento, this.nome, this.peso);
+  Animal(this.nome, this.peso, this.alimento, this.especie);
 
   void fazerSom();
 
   void comer(){
-    print("O Animal está comendo....");
+    print("$nome comeu! - ${alimento.tipo}");
   }
+
 }
