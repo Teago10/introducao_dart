@@ -1,5 +1,8 @@
 import 'dart:convert';
 
+import '../models/localizacao.dart';
+import '../services/localizacaoService.dart';
+
 import '../exceptions/cep-invalido-exception.dart';
 import '../models/endereco.dart';
 import '../services/CEPService.dart';
@@ -8,6 +11,8 @@ import 'package:http/http.dart' as http;
 class EnderecoController {
 
   CEPService cepService = CEPService();
+
+  Localizacaoservice localizacaoservice = Localizacaoservice();
 
   String validaCEP(String? cep) {
     //se o cep digitado dor nulo ou em branco, retorna uma exceção
@@ -29,6 +34,10 @@ class EnderecoController {
 
   Future<Endereco> buscarEndereco(String cep) async{
     return cepService.consultar(cep);
+  }
+
+  Future<Localizacao> buscarlocalizacao(String CEP) async{
+    return localizacaoservice.consultar(CEP);
   }
 
   

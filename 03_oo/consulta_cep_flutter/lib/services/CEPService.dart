@@ -1,9 +1,9 @@
 
 import 'dart:convert';
 
-import 'package:consultacep/exceptions/api-invalida-exception.dart';
-import 'package:consultacep/exceptions/cep-nao-encontrado-exception.dart';
-import 'package:consultacep/models/endereco.dart';
+import 'package:consulta_cep_flutter/exceptions/api-invalida-exception.dart';
+import 'package:consulta_cep_flutter/exceptions/cep-nao-encontrado-exception.dart';
+import 'package:consulta_cep_flutter/models/endereco.dart';
 import 'package:http/http.dart' as http;
 
 
@@ -13,7 +13,7 @@ class CEPService {
     final url = Uri.parse('http://viacep.com.br/ws/$cep/json/');
 
     //declara a variável
-    final resposta;
+    final http.Response resposta;
     try {
       // inicializa a variável
       resposta = await http.get(url);
